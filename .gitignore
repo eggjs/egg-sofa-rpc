@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+.*
+!.github
+!.eslintignore
+!.eslintrc
+!.gitignore
+!.travis.yml
+!.autod.conf.js
+*.bin

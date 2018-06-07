@@ -20,9 +20,9 @@
 [download-image]: https://img.shields.io/npm/dm/egg-sofa-rpc.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-sofa-rpc
 
-[SOFARPC](https://github.com/alipay/sofa-rpc) plugin for egg framework
+[SOFARPC](https://github.com/alipay/sofa-rpc) 插件是为 egg 提供调用和发布 RPC 服务的能力
 
-## Install
+## 安装
 
 ```bash
 $ npm i egg-sofa-rpc --save
