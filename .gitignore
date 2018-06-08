@@ -68,3 +68,5 @@ typings/
 !.travis.yml
 !.autod.conf.js
 *.bin
+
+run
