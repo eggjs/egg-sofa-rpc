@@ -54,7 +54,7 @@ config.sofaRpc = {
 };
 ```
 
-We plan to provide more implementations of service discovery. And also you can implement it by yourself, you can follow this [article]((https://github.com/eggjs/egg-sofa-rpc/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E5%AE%9E%E7%8E%B0)
+We plan to provide more implementations of service discovery. And also you can implement it by yourself, you can follow this [article](https://github.com/eggjs/egg-sofa-rpc/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E5%AE%9E%E7%8E%B0)
 
 ### RPC Client
 
@@ -240,7 +240,7 @@ For more details of `app.rpcRequest`, you can refer to this [acticle](https://gi
 
 ## Docs
 
-- [《RPC in Nodejs Part One》](https://github.com/alipay/sofa-rpc-node/wiki/%E8%81%8A%E8%81%8A-Nodejs-RPC%EF%BC%88%E4%B8%80%EF%BC%89)
+- [RPC in Nodejs Part One](https://github.com/alipay/sofa-rpc-node/wiki/%E8%81%8A%E8%81%8A-Nodejs-RPC%EF%BC%88%E4%B8%80%EF%BC%89)
 - [Cross-Language Interoperability between Eggjs & SOFA](https://github.com/eggjs/egg-sofa-rpc/wiki/Eggjs-%E5%92%8C-SOFA-%E7%9A%84%E8%B7%A8%E8%AF%AD%E8%A8%80%E4%BA%92%E8%B0%83)
 - [Custom Service Discovery in Eggjs](https://github.com/eggjs/egg-sofa-rpc/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E5%AE%9E%E7%8E%B0)
 - [RPC Proxy Configuration in Eggjs](https://github.com/eggjs/egg-sofa-rpc/wiki/RPC-%E4%BB%A3%E7%90%86%EF%BC%88Proxy%EF%BC%89%E9%85%8D%E7%BD%AE)
