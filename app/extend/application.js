@@ -1,6 +1,5 @@
 'use strict';
 
-const assert = require('assert');
 const EggRpcClient = require('../../lib/client');
 const EggRpcServer = require('../../lib/server');
 const ProxyBase = require('../../lib/base_proxy');
@@ -18,7 +17,7 @@ module.exports = {
   get sofaRegistry() {
     if (!this[_sofaRegistry]) {
       const options = this.config.sofaRpc.registry;
-      assert(options && options.address, '[egg-sofa-rpc] registry.address is required');
+      if (!options || !options.address) return null;
       this[_sofaRegistry] = new ZookeeperRegistry(Object.assign({
         logger: this.coreLogger,
       }, options));

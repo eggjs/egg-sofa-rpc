@@ -5,7 +5,7 @@ GEN=${PWD}/node_modules/.bin/egg-rpc-generator
 # test dir
 
 DIR=${PWD}/test/fixtures/apps
-NAMES="sofarpc"
+NAMES="sofarpc hardload"
 
 for NAME in $NAMES
 do
