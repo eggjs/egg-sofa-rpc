@@ -1,4 +1,10 @@
 
+1.1.0 / 2018-10-17
+==================
+
+**features**
+  * [[`72709ad`](http://github.com/eggjs/egg-sofa-rpc/commit/72709adbb81645b412e6fb39a7c2c697f9c6c894)] - feat: support custom registry (gxcsoccer <<gxcsoccer@126.com>>)
+
 1.0.1 / 2018-10-06
 ==================
 
