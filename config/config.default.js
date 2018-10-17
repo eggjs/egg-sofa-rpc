@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const antpb = require('antpb');
 const protocol = require('sofa-bolt-node');
+const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
 
 module.exports = appInfo => {
 
@@ -16,9 +17,8 @@ module.exports = appInfo => {
 
   return {
     sofaRpc: {
-      registry: {
-        // address: 'registry address',
-      },
+      registryClass: ZookeeperRegistry,
+      registry: null,
       client: {
         protocol,
         responseTimeout: 3000,
