@@ -3,7 +3,6 @@
 const EggRpcClient = require('../../lib/client');
 const EggRpcServer = require('../../lib/server');
 const ProxyBase = require('../../lib/base_proxy');
-const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
 
 // Symbols
 const _sofaRegistry = Symbol.for('egg#sofaRegistry');
@@ -17,9 +16,12 @@ module.exports = {
   get sofaRegistry() {
     if (!this[_sofaRegistry]) {
       const options = this.config.sofaRpc.registry;
-      if (!options || !options.address) return null;
-      this[_sofaRegistry] = new ZookeeperRegistry(Object.assign({
+      if (!options) return null;
+
+      const registryClass = this.config.sofaRpc.registryClass;
+      this[_sofaRegistry] = new registryClass(Object.assign({
         logger: this.coreLogger,
+        cluster: this.cluster,
       }, options));
       this[_sofaRegistry].on('error', err => { this.coreLogger.error(err); });
       this.beforeClose(async () => {
