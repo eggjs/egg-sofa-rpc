@@ -1,4 +1,4 @@
-// Don't modified this file, it's auto created by egg-rpc-tool
+// Don't modified this file, it's auto created by egg-rpc-generator
 
 'use strict';
 
@@ -7,7 +7,7 @@ const path = require('path');
 /* eslint-disable */
 /* istanbul ignore next */
 module.exports = app => {
-  const consumer = app.sofaRpcClient.createConsumer({
+  const consumer = app.rpcClient.createConsumer({
     interfaceName: 'com.alipay.sofa.rpc.test.ProtoService',
     targetAppName: 'sofarpc',
     version: '1.0',
@@ -32,7 +32,6 @@ module.exports = app => {
     async echoObj(req) {
       return await consumer.invoke('echoObj', [ req ], { 
         ctx: this.ctx,
-        codecType: 'protobuf',
       });
     }
   }
@@ -40,6 +39,3 @@ module.exports = app => {
   return ProtoService;
 };
 /* eslint-enable */
-
-
-

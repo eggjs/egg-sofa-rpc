@@ -1,6 +1,6 @@
 'use strict';
 
-exports.sofaRpc = {
+exports.rpc = {
   registry: {
     address: '127.0.0.1:2181',
   },

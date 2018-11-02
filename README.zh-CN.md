@@ -47,7 +47,7 @@ exports.sofaRpc = {
 
 ```js
 // ${app_root}/config/config.${env}.js
-config.sofaRpc = {
+config.rpc = {
   registry: {
     address: '127.0.0.1:2181', // 根据实际情况配置
   },
@@ -70,7 +70,7 @@ config.sofaRpc = {
 
 ```js
 // ${app_root}config/config.${env}.js
-exports.sofaRpc = {
+exports.rpc = {
   client: {
     responseTimeout: 3000,
   },
@@ -179,7 +179,7 @@ enum Group {
 
 ```js
 module.exports = {
-	sofaRpc: {
+	rpc: {
     server: {
       namespace: 'com.nodejs.rpc',
     },

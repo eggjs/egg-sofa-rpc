@@ -1,6 +1,6 @@
 'use strict';
 
-exports.sofaRpc = {
+exports.rpc = {
   registryClass: require('../lib/registry'),
   registry: {},
 };

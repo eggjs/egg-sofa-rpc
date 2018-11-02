@@ -7,7 +7,6 @@ const protocol = require('sofa-bolt-node');
 const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
 
 module.exports = appInfo => {
-
   const protoPath = path.join(appInfo.baseDir, 'run/proto.json');
   // 加载 proto
   if (fs.existsSync(protoPath)) {
@@ -16,7 +15,7 @@ module.exports = appInfo => {
   }
 
   return {
-    sofaRpc: {
+    rpc: {
       registryClass: ZookeeperRegistry,
       registry: null,
       client: {
@@ -37,6 +36,7 @@ module.exports = appInfo => {
         version: '1.0',
         group: 'SOFA',
         uniqueId: null,
+        autoServe: true, // 如果发现有暴露服务，则自定启动 server
       },
     },
   };

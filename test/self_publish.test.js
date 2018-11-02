@@ -123,7 +123,7 @@ describe('test/self_publish.test.js', () => {
         baseDir: 'apps/self-publish',
       });
       await app.ready();
-      await app.sofaRpcServer.start();
+      await app.rpcServer.start();
 
       await app.close();
     });

@@ -47,7 +47,7 @@ By default, We use zookeeper for service discovery. Therefore you need to config
 
 ```js
 // ${app_root}/config/config.${env}.js
-config.sofaRpc = {
+config.rpc = {
   registry: {
     address: '127.0.0.1:2181', // configure your real zk address
   },
@@ -70,7 +70,7 @@ Configure RPC Client information in ${app_root}/config/config.{env}.js:
 
 ```js
 // ${app_root}config/config.${env}.js
-exports.sofaRpc = {
+exports.rpc = {
   client: {
     responseTimeout: 3000,
   },
@@ -179,7 +179,7 @@ Configure RPC Server information in ${app_root}/config/config.{env}.js:
 
 ```js
 module.exports = {
-	sofaRpc: {
+	rpc: {
     server: {
       namespace: 'com.nodejs.rpc',
     },
