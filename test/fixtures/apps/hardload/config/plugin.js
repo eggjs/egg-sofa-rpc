@@ -1,8 +1,6 @@
 'use strict';
 
-const path = require('path');
-
-exports.sofaRpc = {
+exports.rpc = {
   enable: true,
-  path: path.join(__dirname, '../../../../../'),
+  package: 'egg-rpc-base',
 };

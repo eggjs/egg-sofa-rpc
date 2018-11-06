@@ -1,6 +1,6 @@
 'use strict';
 
-exports.sofaRpc = {
+exports.rpc = {
   client: {
     ['sofarpc.rpc.service.url']: '127.0.0.1:12200',
   },

@@ -13,6 +13,7 @@ module.exports = {
     'autod-egg',
     'egg',
     'egg-bin',
+    'egg-rpc-base',
     'egg-rpc-generator',
     'eslint',
     'eslint-config-egg',
