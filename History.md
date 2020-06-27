@@ -1,4 +1,10 @@
 
+3.0.0 / 2020-06-27
+==================
+
+**features**
+  * [[`113a8a0`](http://github.com/eggjs/egg-sofa-rpc/commit/113a8a06ef18f75e8846d985a738b0a0549f1621)] - feat: support hessian4 (#11) (zōng yǔ <<gxcsoccer@users.noreply.github.com>>)
+
 2.0.0 / 2018-11-07
 ==================
 

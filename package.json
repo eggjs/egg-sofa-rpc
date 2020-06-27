@@ -1,6 +1,6 @@
 {
   "name": "egg-sofa-rpc",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "SOFARPC Plugin for egg",
   "main": "index.js",
   "files": [
