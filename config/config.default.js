@@ -1,23 +1,14 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const antpb = require('antpb');
 const protocol = require('sofa-bolt-node');
 const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
 
-module.exports = appInfo => {
-  const protoPath = path.join(appInfo.baseDir, 'run/proto.json');
-  // 加载 proto
-  if (fs.existsSync(protoPath)) {
-    const proto = antpb.fromJSON(require(protoPath));
-    protocol.setOptions({ proto });
-  }
-
+module.exports = () => {
   return {
     rpc: {
       registryClass: ZookeeperRegistry,
       registry: null,
+      hessionVersion: '3.0', // 支持 3.0 和 4.0
       client: {
         protocol,
         responseTimeout: 3000,

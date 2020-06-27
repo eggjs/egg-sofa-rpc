@@ -70,3 +70,9 @@ typings/
 *.bin
 
 run
+zookeeper.out
+zookeeper-3.4.6
+*/**/pom.xml
+*/**/apiMeta.json
+*/**/target
+test/fixtures/**/src

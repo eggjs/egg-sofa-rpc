@@ -9,7 +9,7 @@ module.exports = className => {
   let map = classMap[className];
   if (!map) {
     const args = className.split('.');
-    args.unshift(this.proxyClassDir);
+    args.unshift(__dirname);
     args[ args.length - 1 ] = args[ args.length - 1 ] + '.js';
     const classfile = path.join.apply(null, args);
     if (fs.existsSync(classfile)) {

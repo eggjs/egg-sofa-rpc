@@ -4,7 +4,10 @@
   "description": "SOFARPC Plugin for egg",
   "main": "index.js",
   "files": [
-    "config"
+    "lib",
+    "config",
+    "app.js",
+    "agent.js"
   ],
   "eggPlugin": {
     "name": "sofaRpc",
@@ -19,8 +22,10 @@
     "test": "npm run lint && npm run test-local",
     "test-local": "sh test/init.sh && egg-bin test",
     "pkgfiles": "egg-bin pkgfiles --check",
-    "ci": "npm run autod -- --check && npm run pkgfiles && npm run lint && npm run cov",
-    "contributors": "contributors -f plain -o AUTHORS"
+    "ci": "npm run start:zk && npm run autod -- --check && npm run pkgfiles && npm run lint && npm run cov",
+    "contributors": "contributors -f plain -o AUTHORS",
+    "start:zk": "node test/scripts/start.js",
+    "stop:zk": "node test/scripts/stop.js"
   },
   "repository": {
     "type": "git",
@@ -39,28 +44,28 @@
   "homepage": "https://github.com/eggjs/egg-sofa-rpc#readme",
   "dependencies": {
     "antpb": "^1.0.0",
-    "sofa-bolt-node": "^1.0.2",
-    "sofa-rpc-node": "^1.6.0"
+    "sofa-bolt-node": "^2.0.0",
+    "sofa-rpc-node": "^1.18.0"
   },
   "devDependencies": {
-    "autod": "^3.0.1",
+    "autod": "^3.1.0",
     "autod-egg": "^1.1.0",
     "contributors": "^0.5.1",
-    "egg": "^2.12.0",
-    "egg-bin": "^4.9.0",
-    "egg-mock": "^3.20.1",
-    "egg-rpc-base": "^1.1.0",
-    "egg-rpc-generator": "^1.1.1",
-    "eslint": "^5.8.0",
-    "eslint-config-egg": "^7.1.0",
+    "egg": "^2.26.1",
+    "egg-bin": "^4.14.1",
+    "egg-mock": "^4.0.0",
+    "egg-rpc-base": "^1.3.1",
+    "egg-rpc-generator": "^1.3.1",
+    "eslint": "^7.3.1",
+    "eslint-config-egg": "^8.0.1",
     "mz-modules": "^2.1.0",
     "urllib": "^2.28.1"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "ci": {
     "type": "travis",
-    "version": "8, 10"
+    "version": "10, 12, 14"
   }
 }
